@@ -6,7 +6,7 @@ body{
 
 #hd-cabecera{
     background-color:  #2A2B2E;
-    height: 150px;
+    height: auto;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -19,7 +19,8 @@ body{
 #hd-cabecera h1{
     padding-top: 20px;
     color: #87FF65;
-    font: bold 80px arial;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 80px;
 }
 
 #hd-cabecera a{
@@ -30,6 +31,14 @@ h3{
     color: #87FF65;
     font: 30px arial;
     align-self: center;
+}
+
+.caja-nav{
+    background-color: #2A2B2E;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    border-radius: 8px;
 }
 
 #nav-navegacion{
@@ -62,7 +71,6 @@ h3{
     color: #87FF65;
     border-radius: 5px;
 }
-
 
 #section-contenido{
     max-width: 90%;
@@ -102,9 +110,12 @@ table, th, td {
     margin-right: 10px;
     box-shadow: 3px 3px #87FF65;
 }
-
+#article-header{
+    justify-content: center;
+}
 
 #article-1{
+    justify-content: center;
     padding: 30px;
 }
 
