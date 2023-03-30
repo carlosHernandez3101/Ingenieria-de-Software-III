@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi Página Web</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+
+        h1 {
+            color: #0099ff;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hola, Mundo!</h1>
+    <p>Esta es mi primera página web.</p>
+    <button onclick="cambiarFondo()">Cambiar Fondo</button>
+    <script>
+        function generarNuevoColor() {
+            var simbolos, color;
+            simbolos = "0123456789ABCDEF";
+            color = "#";
+
+            for (var i = 0; i < 6; i++) {
+                color = color + simbolos[Math.floor(Math.random() * 16)];
+            }
+            document.body.style.background = color;
+        }
+
+        function cambiarFondo() {
+            /*document.body.style.backgroundColor = "#ffcc00";*/
+            generarNuevoColor();
+        }
+    </script>
+</body>
+
+</html>
