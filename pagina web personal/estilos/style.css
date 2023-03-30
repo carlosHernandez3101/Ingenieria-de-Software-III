@@ -68,29 +68,53 @@ h3{
     color: #87FF65;
     border-radius: 5px;
 }
-
 .principal{
     max-width: 90%;
     margin: auto;
     background-color: #2A2B2E;
-    min-height: 600px;
+    min-height: auto;
     border-radius: 8px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 3em 0;
     color: #A4C2A8;
 }
 .principal p{
+    padding: 0 1em;
     margin: 0 0 1em;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
 }
 .titulo-principal{
     text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 #img-elmo{
     float: left;
-    margin: 0 20px 20px 20px;
+    margin: 0 20px 10px 20px;
+}
+
+.container{
+    display: flex;
+    padding: 0 1em;
+    margin: 0 0 1em;
+    object-fit: cover;
+}
+
+.card{
+    flex: 1;
+    overflow: hidden;
+    height: 350px;
+}
+.card img{
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);    
+}
+.card:hover{
+    flex: 3;
+}
+.card:hover img{
+    filter: none;
 }
 
 table{
@@ -105,6 +129,8 @@ table, th, td {
     margin-left: auto;
     margin-right: auto;
     padding: 2px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
 }
 
 #titulo-tabla{
@@ -112,51 +138,11 @@ table, th, td {
     font-weight: bold;
 }
 
-
-
 #section-img img{
     max-width: 310px;
     border-radius: 10px;
     margin-right: 10px;
     box-shadow: 3px 3px #87FF65;
-}
-#article-header{
-    justify-content: center;
-}
-
-#article-1{
-    justify-content: center;
-    padding: 30px;
-}
-
-#article-2{
-    padding: 30px;
-    font-size: large;
-}
-
-#article-3{
-    padding: 30px;
-    font-size: 20px;
-}
-
-#article-4{
-    padding: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    width: 90%;
-    margin: auto;
-    border-radius: 8px;
-    opacity: 0.8;
-    color: #ACEB98;
-}
-
-#article-5{
-    padding: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    width: 90%;
-    margin: auto;
-    color: #ACEB98;
 }
 
 #li-projects{
@@ -232,6 +218,8 @@ img{
     align-items: center;
     width: 90%;
     margin: auto;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
 }
 
 #form-contacto input{
