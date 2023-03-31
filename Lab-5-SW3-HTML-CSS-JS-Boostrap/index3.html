@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de personalización con Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Cambio de color de fondo y texto en el botón */
+        .btn-custom {
+            background-color: #4c70af;
+            color: white;
+        }
+
+        /* Ajuste del tamaño de fuente en el encabezado */
+        .h1 {
+            font-size: 3em;
+        }
+
+        /* Ajuste del margen inferior en el formulario */
+        form {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ejemplo de personalización con Bootstrap</h1>
+        <button type="button" class="btn btn-custom">Boton
+            personalizado</button>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Dirección de correo
+                    electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Ingresa correo electrónico">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa contraseña">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+        </form>
+
+        <ul class="list-group">
+            <li class="list-group-item">Elemento 1</li>
+            <li class="list-group-item">Elemento 2</li>
+            <li class="list-group-item">Elemento 3</li>
+        </ul>
+    </div>
+</body>
+
+</html>
