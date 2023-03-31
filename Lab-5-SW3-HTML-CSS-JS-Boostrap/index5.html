@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi p&aacute;gina con Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data- toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mi p&aacute;gina</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data- toggle="collapse"
+                    data-target="#navbar-collapse">
+
+                    <span class="sr-only">Menú de navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mi sitio web</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="#">Sección 1</a></li>
+                    <li><a href="#">Sección 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1>Bienvenido a mi p&aacute;gina</h1>
+        <p>Esta es una p&aacute;gina de ejemplo creada con Bootstrap para
+            laboratorio de Software 3</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Leer m&aacute;s</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h2>Encabezado</h2>
+                <p>Bootstrap es un framework front-end utilizado para
+                    desarrollar aplicaciones web y sitios mobile first,
+                    o sea, con un layout que se adapta a la pantalla del
+                    dispositivo utilizado por el usuario..</p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
+                    class="img-responsive" alt="Imagen 1">
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <img src="https://www.searchenginejournal.com/wp-content/uploads/2021/10/responsive-web-design-1-61f01c4b64c5f-sej.png"
+                    class="img-responsive" alt="Imagen 2">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-lg-6">
+                <h2>Lista de elementos</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Elemento 1</li>
+                    <li class="list-group-item">Elemento 2</li>
+                    <li class="list-group-item">Elemento 3</li>
+                    <li class="list-group-item">Elemento 4</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <h2>Contacto</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" rows="5" id="mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Tabla de datos</h2>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carlos</td>
+                            <td>Perafan</td>
+                            <td>cperafan@unicauca.edu.co</td>
+                        </tr>
+                        <tr>
+                            <td>andres</td>
+                            <td>zapata</td>
+                            <td>azapata@@unicauca.edu.co</td>
+                        </tr>
+                        <tr>
+                            <td>sebatian juan</td>
+                            <td>bando</td>
+                            <td>sjobando@@unicauca.edu.co</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>Desarrollado por #EstudianteUnicauca &copy; 2023</p>
+    </footer>
+</body>
+
+</html>
