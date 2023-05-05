@@ -1,0 +1,36 @@
+<?php
+
+require 'modelo/clsProductoCRUD.php';
+
+class controladorProducto {
+    //Variables
+    private $crud;
+    
+    //metodos
+    public function __construct(){
+        $this->crud = new ProductoCRUD();
+    }    
+    
+    public function Listar(){
+        require_once 'vista/paginaProductos.php';
+    }
+    
+	public function Formulario(){
+        $obj = new Producto();  
+        if (isset($_REQUEST['codigo'])) {
+            $obj = $this->crud->Obtener($_REQUEST['codigo']);
+        }
+        require_once 'vista/formularioProductos.php';
+    }
+    
+	public function Registrar(){
+        
+        $obj = new Producto();      
+        $obj->nombre = $_REQUEST['nombre'];
+        $obj->precio = $_REQUEST['precio'];
+        $this->crud->Registrar($obj);
+        header("Location: index.php?c=Producto&a=Listar");
+    }
+
+    
+}
