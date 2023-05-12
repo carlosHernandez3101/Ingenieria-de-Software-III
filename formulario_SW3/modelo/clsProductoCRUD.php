@@ -30,7 +30,7 @@ class ProductoCRUD{
     }
     
     public function Obtener($codigo){
-        $consulta = $this->auxPDO->prepare("SELECT * FROM producto WHERE ID = ?");
+        $consulta = $this->auxPDO->prepare("SELECT * FROM producto WHERE codigo = ?");
         $consulta->execute(array($codigo));
         $resultado = new Producto();
         foreach ($consulta->fetchALL(PDO::FETCH_OBJ) as $obj){
@@ -56,7 +56,7 @@ class ProductoCRUD{
     public function actualizar($obj)
     {
         try {
-            $consulta = "UPDATE producto SET nombre = ?, precio = ? WHERE codigo = ?"
+            $consulta = "UPDATE producto SET nombre = ?, precio = ? WHERE codigo = ?";
             $this->auxPDO->prepare($consulta)->execute(array(
 
                 $obj->nombre,
@@ -73,12 +73,9 @@ class ProductoCRUD{
     {
         try {
             $consulta = "DELETE FROM producto WHERE codigo = ?";
-            $this->auxPDO->prepare($consulta)->execute(array(
-                $obj->codigo
-            ));
-
-        } catch (\Throwable $th) {
-            //throw $th;
+            $this->auxPDO->prepare($consulta)->execute(array($codigo));
+        } catch (Exception $e) {
+            die($e->getMessage());
         }
     }
 }

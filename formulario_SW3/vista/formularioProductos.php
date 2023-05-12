@@ -1,6 +1,10 @@
 <?php
 require_once 'modelo/clsProductoCRUD.php';
 $codigo = isset($_REQUEST['codigo']) ? $_REQUEST['codigo'] : '';
+if ($codigo != "") {
+	$crud = new ProductoCRUD();
+	$producto = $crud->Obtener($codigo);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,10 +15,11 @@ $codigo = isset($_REQUEST['codigo']) ? $_REQUEST['codigo'] : '';
     </head>
     <body>
 	<div class="contenedor">
-		<form action="?c=Producto&a=Registrar" class="formulario" id="formulario" name="formulario" method="POST">
+		<form action="<?php echo ($codigo != "") ? "?c=Producto&a=Actualizar&codigo=$codigo" : "?c=Producto&a=Registrar"; ?>" 
+		class="formulario" id="formulario" name="formulario" method="POST">
 			<div class="contenedor-inputs">
-				<input type="text" name="nombre" placeholder="Nombre">
-				<input type="text" name="precio" placeholder="Precio">
+				<input type="text" name="nombre" placeholder="Nombre" value ="<?php echo ($codigo != "") ? $producto->nombre : ""; ?>">
+				<input type="text" name="precio" placeholder="Precio" value ="<?php echo ($codigo != "") ? $producto->codigo : ""; ?>">
 				
 				<ul class="error" id="error"></ul>
 			</div>

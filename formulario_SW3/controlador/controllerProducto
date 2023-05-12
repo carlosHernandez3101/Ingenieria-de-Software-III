@@ -23,12 +23,24 @@ class controladorProducto {
         require_once 'vista/formularioProductos.php';
     }
     
-	public function Registrar(){
-        
+	public function Registrar(){        
         $obj = new Producto();      
         $obj->nombre = $_REQUEST['nombre'];
         $obj->precio = $_REQUEST['precio'];
         $this->crud->Registrar($obj);
+        header("Location: index.php?c=Producto&a=Listar");
+    }
+
+    public function Actualizar(){
+        $obj = new Producto();
+        $obj->codigo = $_REQUEST['codigo'];
+        $obj->nombre = $_REQUEST['nombre'];
+        $obj->precio = $_REQUEST['precio'];
+        $this->crud->Actualizar($obj);
+        header("Location: index.php?c=Producto&a=Listar");
+    }
+    public function Eliminar(){
+        $this->crud->Eliminar($_REQUEST['codigo']);
         header("Location: index.php?c=Producto&a=Listar");
     }
 

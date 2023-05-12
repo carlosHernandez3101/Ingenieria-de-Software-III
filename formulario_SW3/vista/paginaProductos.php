@@ -17,7 +17,8 @@
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre</th>
-                        <th>Precio</th>                        
+                        <th>Precio</th>
+                        <th>Acciones</th>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -25,11 +26,17 @@
                     <tr>;
                         <td><?php echo $item->codigo;?></td>
                         <td><?php echo $item->nombre;?></td>
-                        <td><?php echo $item->precio;?></td>                       
+                        <td><?php echo $item->precio;?></td>  
+                        <td>
+                            <div class = "contenedor-actions">
+                                <a class="btn-edit" href="?c=Producto&a=Formulario&codigo=<?php echo $item->codigo;?>">Editar</a>
+                                <a class="btn-delete" href="?c=Producto&a=Eliminar&codigo=<?php echo $item->codigo;?>">Eliminar</a>
+                            </div>
+                        </td>                     
                     </tr>
                     <?php endforeach;?>
                 </tbody>
             </table>              
-        </center>
+</center>
     </body>
 </html>
