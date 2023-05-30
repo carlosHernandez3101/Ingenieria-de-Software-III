@@ -34,9 +34,9 @@ class ProductoCRUD{
         $consulta->execute(array($codigo));
         $resultado = new Producto();
         foreach ($consulta->fetchALL(PDO::FETCH_OBJ) as $obj){
-            $resultado->__SET('ID',$obj->codigo);
-            $resultado->__SET('Nombre',$obj->nombre);
-            $resultado->__SET('Correo',$obj->precio);            
+            $resultado->__SET('codigo',$obj->codigo);
+            $resultado->__SET('nombre',$obj->nombre);
+            $resultado->__SET('correo',$obj->precio);            
         }
         return $resultado;
     }
